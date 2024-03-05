@@ -1,5 +1,4 @@
-﻿@* @model List<FileDetailsViewTable.Models.FileTable> *@
-@using X.PagedList.Mvc.Core
+﻿@using X.PagedList.Mvc.Core
 @model X.PagedList.IPagedList<FileDetailsViewTable.Models.FileTable>
 
 <div class="container mt-4">
@@ -7,7 +6,9 @@
         <thead class="thead-dark">
             <tr>
                 <th class="text-center">Name</th>
-                <th class="text-center">Date Modified</th>
+                <th class="text-center">Date</th>
+                <th class="text-center">Type</th>
+                <th class="text-center">Size</th>
                 <th class="text-center">Action</th>
             </tr>
         </thead>
@@ -17,6 +18,8 @@
                 <tr>
                     <td class="text-center">@file.Name</td>
                     <td class="text-center">@String.Format("{0:yyyy-MM-dd HH:mm}", file.DateModified)</td>
+                    <td class="text-center">@file.Type</td>
+                    <td class="text-center">@file.Size</td>
                     <td class="text-center">
                         <a asp-action="Download" asp-route-filePath="@file.FilePath" class="btn btn-primary">Download</a>
                     </td>
