@@ -1,7 +1,3 @@
-Certainly! Below is a sample project description for your FileDetailsViewTable project:
-
----
-
 Project Description: FileDetailsViewTable
 
 Overview:
@@ -42,4 +38,5 @@ Future development may include additional features such as search functionality,
 
 Feel free to tailor this description according to the specific functionalities and goals of your project.
 
-![Screenshot 2024-03-05 153636](https://github.com/alif-dot/FileDetailsViewInTable/assets/62230465/c2975531-a62f-46fa-b30b-59cab9f24b85)
+![Screenshot 2024-03-05 154436](https://github.com/alif-dot/FileDetailsViewInTable/assets/62230465/63c15d91-515a-46aa-a698-1d654d30d0cc)
+
