@@ -18,7 +18,8 @@ namespace FileDetailsViewTable.Controllers
         {
             return _configuration["AppSettings:FolderPath"];
         }
-        private const int PageSize = 10;
+
+        private const int PageSize = 5;
 
         public IActionResult Index(int? page = 1)
         {
