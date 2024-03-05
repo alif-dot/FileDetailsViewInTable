@@ -7,11 +7,22 @@ namespace FileDetailsViewTable.Controllers
 {
     public class FileController : Controller
     {
+        private readonly IConfiguration _configuration;
+
+        public FileController(IConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
+
+        private string GetFolderPath()
+        {
+            return _configuration["AppSettings:FolderPath"];
+        }
         private const int PageSize = 10;
 
-        public IActionResult Index(int? page)
+        public IActionResult Index(int? page = 1)
         {
-            string folderPath = @"E:\PC's Software\Tools";
+            string folderPath = GetFolderPath();
             List<FileTable> allFiles = GetZipFiles(folderPath);
             allFiles = allFiles.OrderBy(f => f.DateModified).ToList();
             var pagedList = allFiles.ToPagedList(page ?? 1, PageSize);
